@@ -13,3 +13,7 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     yarn \
  && rm -rf /var/lib/apt/lists/*
+
+ENV M2_HOME /usr/share/maven
+ENV MAVEN_HOME /usr/share/maven
+ENV MAVEN_CONFIG "$USER_HOME_DIR/.m2"
