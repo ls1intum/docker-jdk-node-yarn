@@ -13,3 +13,5 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     yarn \
  && rm -rf /var/lib/apt/lists/*
+
+ENV M2_HOME /usr/share/maven
