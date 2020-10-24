@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.10
 
 MAINTAINER Stephan Krusche <krusche@in.tum.de>
 
@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y \
     gnupg \
     git \
     maven \
- && curl -sL https://deb.nodesource.com/setup_14.x | bash - \
+ && curl -sL https://deb.nodesource.com/setup_15.x | bash - \
  && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
  && echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list \
  && apt-get update && apt-get install -y \
