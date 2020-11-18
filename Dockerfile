@@ -2,6 +2,8 @@ FROM ubuntu:20.10
 
 MAINTAINER Stephan Krusche <krusche@in.tum.de>
 
+RUN apt-get update && apt-get install -y locales
+
 # Set the locale
 RUN locale-gen en_US.UTF-8
 ENV LANG en_US.UTF-8
