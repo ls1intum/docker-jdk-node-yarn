@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
  
 RUN mkdir -p /opt/openjdk \
  && cd /opt/openjdk \
- && curl -L https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15%2B36/OpenJDK15U-jdk_x64_linux_hotspot_15_36.tar.gz | tar zx --strip-components=1 \
+ && curl -L https://github.com/AdoptOpenJDK/openjdk15-binaries/releases/download/jdk-15.0.2%2B7/OpenJDK15U-jdk_x64_linux_hotspot_15.0.2_7.tar.gz | tar zx --strip-components=1 \
  && test -f /opt/openjdk/bin/java \
  && test -f /opt/openjdk/bin/javac
 
