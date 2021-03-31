@@ -10,3 +10,13 @@ Docker Container for Docker Hub
 	java -version
 
 	node --version
+	
+	
+### Verification
+Try out if everything works correctly when testing a Spring Boot Application, e.g. Artemis
+
+	git clone --depth 1 --single-branch https://github.com/ls1intum/Artemis.git artemis
+
+	cd artemis
+	
+	./gradlew test --tests ProgrammingExerciseTemplateIntegrationTest
