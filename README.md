@@ -8,6 +8,8 @@ Docker Container for Docker Hub
 	docker exec -it docker-jdk-node-yarn /bin/bash
 
 	java -version
+	
+	mvn -v
 
 	node --version
 	
