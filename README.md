@@ -12,8 +12,8 @@ Docker Container for Docker Hub
 	mvn -v
 
 	node --version
-	
-	
+
+
 ### Verification
 Try out if everything works correctly when testing a Spring Boot Application, e.g. Artemis
 
