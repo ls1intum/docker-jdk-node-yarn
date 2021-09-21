@@ -1,4 +1,4 @@
-FROM ubuntu:20.10
+FROM ubuntu:21.04
 
 MAINTAINER Stephan Krusche <krusche@in.tum.de>
 
@@ -22,6 +22,9 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     yarn \
  && rm -rf /var/lib/apt/lists/*
+ 
+# update npm to use the latest version
+RUN npm install -g npm@latest
  
 RUN mkdir -p /opt/openjdk \
  && cd /opt/openjdk \

@@ -11,7 +11,9 @@ Docker Container for Docker Hub
 	
 	mvn -v
 
-	node --version
+	node -v
+	
+	npm -v
 
 
 ### Verification
