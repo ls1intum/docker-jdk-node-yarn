@@ -24,3 +24,19 @@ Try out if everything works correctly when testing a Spring Boot Application, e.
 	cd artemis
 	
 	./gradlew test --tests ProgrammingExerciseTemplateIntegrationTest
+
+
+
+### Publish to Dockerhub
+
+	docker build --no-cache -t ls1tum/openjdk-node-yarn:<tagname> .
+
+	docker push ls1tum/openjdk-node-yarn:<tagname>
+	
+	
+	
+#### Example
+
+	docker build --no-cache -t ls1tum/openjdk-node-yarn:java16node14-2 .
+	
+	docker push ls1tum/openjdk-node-yarn:java16node14-2
