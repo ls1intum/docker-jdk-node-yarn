@@ -28,7 +28,7 @@ RUN npm install -g npm@latest
  
 RUN mkdir -p /opt/openjdk \
  && cd /opt/openjdk \
- && curl -L https://github.com/AdoptOpenJDK/openjdk16-binaries/releases/download/jdk-16.0.1%2B9/OpenJDK16U-jdk_x64_linux_hotspot_16.0.1_9.tar.gz | tar zx --strip-components=1 \
+ && curl -L https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17%2B35/OpenJDK17-jdk_x64_linux_hotspot_17_35.tar.gz | tar zx --strip-components=1 \
  && test -f /opt/openjdk/bin/java \
  && test -f /opt/openjdk/bin/javac
 
@@ -36,7 +36,7 @@ ENV JAVA_HOME /opt/openjdk
 ENV PATH $JAVA_HOME/bin:$PATH
 ENV M2_HOME /usr/share/maven
 
-# workaround for an issue with maven 3.6.3 and JDK 16, see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=980467
+# workaround for an issue with maven 3.6.3 and JDK 17, see https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=980467
 # we can delete the following 4 lines as soon as the next maven release will be available
 RUN cd /usr/share/java \
  && curl -o guice-4.2.3-no_aop.jar https://repo1.maven.org/maven2/com/google/inject/guice/4.2.3/guice-4.2.3-no_aop.jar \
