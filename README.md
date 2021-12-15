@@ -1,7 +1,7 @@
 # docker-jdk-node-yarn
 Docker Container for Docker Hub
 
-	docker build --no-cache -t docker-jdk-node-yarn .
+	docker build --platform linux/amd64 --no-cache -t docker-jdk-node-yarn .
 
 	docker run -itd -p 80:80 --name docker-jdk-node-yarn docker-jdk-node-yarn /bin/bash
 
@@ -29,7 +29,7 @@ Try out if everything works correctly when testing a Spring Boot Application, e.
 
 ### Publish to Dockerhub
 
-	docker build --no-cache -t ls1tum/openjdk-node-yarn:<tagname> .
+	docker build --platform linux/amd64 --no-cache -t ls1tum/openjdk-node-yarn:<tagname> .
 
 	docker push ls1tum/openjdk-node-yarn:<tagname>
 	
@@ -37,6 +37,6 @@ Try out if everything works correctly when testing a Spring Boot Application, e.
 	
 #### Example
 
-	docker build --no-cache -t ls1tum/openjdk-node-yarn:java16node14-2 .
+	docker build --platform linux/amd64 --no-cache -t ls1tum/openjdk-node-yarn:java17node16 .
 	
-	docker push ls1tum/openjdk-node-yarn:java16node14-2
+	docker push ls1tum/openjdk-node-yarn:java17node16
