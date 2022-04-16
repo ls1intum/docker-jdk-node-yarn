@@ -27,16 +27,16 @@ Try out if everything works correctly when testing a Spring Boot Application, e.
 
 
 
-### Publish to Dockerhub
+### Publish to DockerHub and GitHub Registry
 
-	docker build --platform linux/amd64 --no-cache -t ls1tum/openjdk-node-yarn:<tagname> .
+	git tag </tagname>
 
-	docker push ls1tum/openjdk-node-yarn:<tagname>
+    git push --tags
 	
 	
 	
 #### Example
 
-	docker build --platform linux/amd64 --no-cache -t ls1tum/openjdk-node-yarn:java17node16 .
+	git tag java17node16
 	
-	docker push ls1tum/openjdk-node-yarn:java17node16
+	git push --tags
