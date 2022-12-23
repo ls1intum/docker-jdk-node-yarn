@@ -28,4 +28,6 @@ RUN echo "$LANG -- $LANGUAGE -- $LC_ALL" \
     && git --version \
     && mvn --version \
     && java --version \
-    && javac --version
+    && javac --version \
+    && node --version \
+    && npm --version
