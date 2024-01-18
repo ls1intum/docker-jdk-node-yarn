@@ -12,7 +12,7 @@ ENV LC_ALL en_US.UTF-8
 
 RUN apt-get update && apt-get install -y \
     gnupg \
- && curl -sL https://deb.nodesource.com/setup_18.x | bash - \
+ && curl -sL https://deb.nodesource.com/setup_20.x | bash - \
  && apt-get update && apt-get install -y \
     nodejs \
  && rm -rf /var/lib/apt/lists/*
