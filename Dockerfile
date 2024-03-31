@@ -1,4 +1,4 @@
-FROM maven:3-eclipse-temurin-17
+FROM maven:3-eclipse-temurin-21
 
 MAINTAINER Stephan Krusche <krusche@in.tum.de>
 
@@ -16,7 +16,7 @@ RUN apt-get update && apt-get install -y \
  && apt-get update && apt-get install -y \
     nodejs \
  && rm -rf /var/lib/apt/lists/*
- 
+
 # update npm to use the latest version
 RUN npm install -g npm@latest
 
