@@ -13,7 +13,7 @@ ENV LC_ALL en_US.UTF-8
 # Also install Java 17 (needed for running PE templates)
 RUN apt-get update && apt-get install -y \
     gnupg openjdk-17-jdk \
- && curl -sL https://deb.nodesource.com/setup_20.x | bash - \
+ && curl -sL https://deb.nodesource.com/setup_22.x | bash - \
  && apt-get update && apt-get install -y \
     nodejs \
  && rm -rf /var/lib/apt/lists/*
