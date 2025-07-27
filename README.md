@@ -1,7 +1,7 @@
 # docker-jdk-node-yarn
 Docker Container for Docker Hub
 
-	docker build --platform linux/amd64 --no-cache -t openjdk-node-yarn .
+	docker build --no-cache -t openjdk-node-yarn .
 
 	docker run -itd -p 80:80 --name openjdk-node-yarn openjdk-node-yarn /bin/bash
 
@@ -37,7 +37,7 @@ Try out if everything works correctly when testing a Spring Boot Application, e.
 	
 #### Example
 
-	git tag java17node16
+	git tag java21node24-1
 	
 	git push --tags
 
@@ -50,11 +50,11 @@ Try out if everything works correctly when testing a Spring Boot Application, e.
 	
 	docker rmi openjdk-node-yarn
 
-	docker rmi ls1tum/openjdk-node-yarn:java21node22-2
+	docker rmi ls1tum/openjdk-node-yarn:java21node24-1
 
-	docker pull ls1tum/openjdk-node-yarn:java21node22-2
+	docker pull ls1tum/openjdk-node-yarn:java21node22-1
 	
-	docker run -itd -p 80:80 --name openjdk-node-yarn ls1tum/openjdk-node-yarn:java21node22-2 /bin/bash
+	docker run -itd -p 80:80 --name openjdk-node-yarn ls1tum/openjdk-node-yarn:java21node24-1 /bin/bash
 	
 	docker exec -it openjdk-node-yarn /bin/bash
 	
