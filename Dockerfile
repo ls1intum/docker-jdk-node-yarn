@@ -2,7 +2,7 @@ FROM maven:3.9.11-eclipse-temurin-21
 
 LABEL maintainer="Stephan Krusche <krusche@tum.de>"
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y locales
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends locales
 
 # Set the locale
 RUN locale-gen en_US.UTF-8
@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends gnupg openjdk-1
     rm -rf /var/lib/apt/lists/*
 
 # update npm to use the latest version
-RUN npm install -g npm@11.4.2
+RUN npm install -g npm@11.6.0
 
 RUN echo "$LANG -- $LANGUAGE -- $LC_ALL" \
     && curl --version \
